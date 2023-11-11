@@ -1,28 +1,46 @@
 import pandas as pd
 
-#the find_matching_family function  takes the user's donation item and the DataFrame as paramenters
-
 # Load the Excel file into a DataFrame
 file_path = r'C:\Users\sara2\Desktop\hack_the_change'
-
 df = pd.read_excel('file_path', engine='openpyxl')
 
-def find_matching_family(user_donation, dataset):
-    # Initialize an empty list to store matching families
+
+def match_donation_to_families(donation, dataset):
     matching_families = []
 
-    # Loop through the dataset and check for matches
     for index, row in dataset.iterrows():
-        # Modify the following line to match your dataset's column names
-        if user_donation == row['NeededItems']:
-            matching_families.append(row['FamilyID'])
+        family_id = row['Family ID']
+        # Extract age demographics from the dataset
+        age_demographics = row[['infants', 'toddlers', 'children', 'tweens', 'teens', 'adults']]
 
-    if matching_families:
-        return matching_families
-    else:
-        return "No matching families found."
+        # Check if the donation matches the age demographics
+        for age_group, quantity in donation.items():
+            if quantity > 0 and age_demographics[age_group] >= quantity:
+                matching_families.append(family_id)
+            else:
+                # Reset the matching flag if any age group does not match
+                matching_families = []
 
-# Usage example
-donation_item = get_donations()  # will be funcrions to prompt user to enetr inof about inetsm they are donating
-matching_families = find_matching_family(donation_item, df)
-print(matching_families)
+        if matching_families:
+            break  # No need to continue checking other families if a match is found
+
+    return matching_families
+
+# Collect user input for the donation
+donation = {
+    'infants': int(input("Enter the number of items for infants: ")),
+    'toddlers': int(input("Enter the number of items for toddlers: ")),
+    'children': int(input("Enter the number of items for children: ")),
+    'tweens': int(input("Enter the number of items for tweens: ")),
+    'teens': int(input("Enter the number of items for teens: ")),
+    'adults': int(input("Enter the number of items for adults: ")),
+}
+
+# Call the matching function
+matching_families = match_donation_to_families(donation, df)
+
+# Display the IDs of matching families
+if matching_families:
+    print("Matching family IDs:", matching_families)
+else:
+    print("No matching families found.")
