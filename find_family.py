@@ -6,25 +6,22 @@ df = pd.read_excel('file_path', engine='openpyxl')
 
 
 def match_donation_to_families(donation, dataset):
-    matching_families = []
+    closest_match = None
+    min_difference = float('inf')
 
     for index, row in dataset.iterrows():
         family_id = row['Family ID']
         # Extract age demographics from the dataset
         age_demographics = row[['infants', 'toddlers', 'children', 'tweens', 'teens', 'adults']]
+        
+        # Calculate the difference between the donation and the family's age demographics
+        difference = sum(abs(donation[age_group] - age_demographics[age_group]) for age_group in donation)
 
-        # Check if the donation matches the age demographics
-        for age_group, quantity in donation.items():
-            if quantity > 0 and age_demographics[age_group] >= quantity:
-                matching_families.append(family_id)
-            else:
-                # Reset the matching flag if any age group does not match
-                matching_families = []
+        if difference < min_difference:
+            closest_match = family_id
+            min_difference = difference
 
-        if matching_families:
-            break  # No need to continue checking other families if a match is found
-
-    return matching_families
+    return closest_match
 
 # Collect user input for the donation
 donation = {
@@ -37,10 +34,10 @@ donation = {
 }
 
 # Call the matching function
-matching_families = match_donation_to_families(donation, df)
+closest_match = match_donation_to_families(donation, df)
 
-# Display the IDs of matching families
-if matching_families:
-    print("Matching family IDs:", matching_families)
+# Display the closest matching family ID
+if closest_match is not None:
+    print("Closest matching family ID:", closest_match)
 else:
     print("No matching families found.")
