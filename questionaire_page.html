@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <link rel="stylesheet" href="style_of_page.css">
+      <script src="script.js"></script>
+      <title>Cozy Clothing</title>
+   </head>
+<body>  
+  <form id="donationForm">  
+    <h2>Cozy Clothing</h2>
+     1. How many items will you be donating? 
+     <select id="amountToDonate" name="amountToDonate" required>
+     <br>
+        <option type="radio" name="amount" value="10,11,12,13,14,15,16,17,18,19,20">10-20</option>
+     </p>
+    <p>
+        <option type="radio" name="amount" value="21,22,23,24,25,26,27,28,29,30">21-30</option>
+    </p>
+    <p>
+        <option type="radio" name="amount" value="31,32,33,34,35,36,37,38,39,40">31-40</option>
+    </p>
+    <p>
+        <option type="radio" name="amount" value="41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60">41+</option>
+    </p>
+    </select>
+    <br>
+    <br>
+    <p>
+        2. Which gender do you primarily have in your donation?
+        <select id="genderAmount" name="genderAmount" required>
+    </p>
+    <p>
+        <option type="radio" name="gender" value="Male">Male</option>
+    </p>
+    <p>
+        <option type="radio" name="gender" value="Female">Female</option>
+    </p>
+    <p>
+        <option type="radio" name="gender" value="Both">Both</option>
+    </p>
+    <p>
+        <option type="radio" name="gender" value="Unisex">Unisex(either gender)</option>
+    </p>
+     </select>   
+   <br>
+   <br>
+
+    <p>
+        3. What age range do your donations consist of?
+        <select id="ageRange" name="ageRange" required>
+    </p>
+    <p>
+        <option type="checkbox" name="age" value="0,1">0-1 years old</option>
+    </p>
+    <p>
+        <option type="checkbox" name="age" value="2,3,4">2-4 years old</option>
+    </p>
+    <p>
+        <option type="checkbox" name="age" value="5,6,7,8">5-8 years old</option>
+    </p>
+    <p>
+        <option type="checkbox" name="age" value="9,10,11,12">9-12 years old</option>
+    </p>
+    <p>
+        <option type="checkbox" name="age" value="13,14,15,16,17">13-17 years old</option>
+    </p>
+    <p>
+        <option type="checkbox" name="age" value="18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50" >18 years or older</option>
+    </p>
+     </select>
+    <br>
+    <br>
+    <p>
+        4. Which area of Calgary do you live in?
+        <select id="borough" name="borough" required>
+    </p>
+    <p>
+        <option type="radio" name="area" value="North West">North West</option>
+    </p>
+    <p>
+        <option type="radio" name="area" value="South West">South West</option>
+    </p>
+    <p>
+        <option type="radio" name="area" value="North East">North East</option>
+    </p>
+    <p>
+        <option type="radio" name="area" value="South East">South East</option>
+    </p>
+     </select>
+     <br>
+    <p>
+        <button type="button" onclick="submitForm()">Get Your Matches!</button>
+    </p>
+    </form>  
+    <div id="resultMessage" style="display: none;"></div>
+    <script src="questionaire.js"></script>
+</body>
+</html>
