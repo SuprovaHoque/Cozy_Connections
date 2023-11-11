@@ -1,0 +1,26 @@
+body {
+    font-family: Open, sans-serif;
+    margin: 20px;
+    text-align: center;
+    margin-top: 20px; /* Add some space between header and text */
+    background: linear-gradient(to bottom, #87CEEB, #FF69B4);
+}
+button {
+    padding: 10px;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+#resultMessage {
+    margin-top: 20px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    display: none;
+    color:red;
+}
