@@ -1,7 +1,11 @@
 import pandas as pd
 
+#the find_matching_family function  takes the user's donation item and the DataFrame as paramenters
+
 # Load the Excel file into a DataFrame
-df = pd.read_excel('refugee_data.xlsx', engine='openpyxl')
+file_path = r'C:\Users\sara2\Desktop\hack_the_change'
+
+df = pd.read_excel('file_path', engine='openpyxl')
 
 def find_matching_family(user_donation, dataset):
     # Initialize an empty list to store matching families
@@ -19,6 +23,6 @@ def find_matching_family(user_donation, dataset):
         return "No matching families found."
 
 # Usage example
-donation_item = "Clothing"  # Replace with the item the user is donating
+donation_item = get_donations()  # will be funcrions to prompt user to enetr inof about inetsm they are donating
 matching_families = find_matching_family(donation_item, df)
 print(matching_families)
