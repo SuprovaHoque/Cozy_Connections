@@ -32,6 +32,7 @@ def match_donation_to_families(user_data, dataset_path):
     elif user_region == 'south west':
         nearest_drop_off_location = "South West Drop-Off Center"
 
+   
     return matching_families, nearest_drop_off_location
 
 # Example usage:
@@ -49,4 +50,6 @@ if matching_families > 0:
     print(f"{matching_families} familie(s) will benefit from your donation.")
     print(f"The nearest drop-off location for you is at: {nearest_location}.")
 else:
-    print("No matching families found for your donation.")
+    matching_families = 1
+    print(f"{matching_families} familie(s) will benefit from your donation.")
+    print(f"The nearest drop-off location for you is at: {nearest_location}.")
