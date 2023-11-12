@@ -7,8 +7,9 @@
 
 body {
     text-align: center;
-    height: 2000px;
-    font-size: xx-large;
+    height: 1500px;
+    font-size: 25px;
+    margin: 0;
     background: linear-gradient(to bottom, #87CEEB, #FF69B4);
     
 }
@@ -21,15 +22,14 @@ h2{
 }
 
 
-button{
-    margin-top: 200px;
+#mainButton{
     height: 200px;;
+    position: relative;
     width: 400px;
     font-size: 80px;
+    text-align: center;
+    margin-left: 35%;
+    margin-right: 50%;
     font-family: 'Quicksand', sans-serif;
     background-color: rgb(185, 153, 228);
 }
-
-
-
-
