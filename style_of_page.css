@@ -1,9 +1,7 @@
 body {
     font-family: Open, sans-serif;
     margin: 20px;
-    text-align: center;
-    margin-top: 20px; /* Add some space between header and text */
-    background: linear-gradient(to bottom, #87CEEB, #FF69B4);
+    
 }
 button {
     padding: 10px;
