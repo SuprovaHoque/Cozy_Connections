@@ -12,15 +12,11 @@ body {
     
 }
 
-Hat.img{
-    position: relative;
-    top: -400px;
-}
 
 h2{
     padding-top: 200px;
     font-size: 900;
-    color: rgb(105, 96, 96);
+    color: rgb(93, 83, 83);
 }
 
 
