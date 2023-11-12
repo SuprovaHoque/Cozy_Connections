@@ -1,0 +1,6 @@
+Family ID,min. # items needed,Demographic
+1,5,"female adult, male adult, male child, female child, male pre-teen "
+2,6,"female adult, male adult, female child, female child, male pre-teen, male teen "
+3,4,"male adult, male infant, male adult, female toddler"
+4,3,"male adult, female adult, female child"
+5,2,"female adult, male teen"
