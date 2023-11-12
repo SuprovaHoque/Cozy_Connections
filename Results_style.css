@@ -1,12 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;700&display=swap');
+
+
 * {
     margin: 0;
     padding: 0;
-    font-family: 'Times New Roman';
+    font-family: 'Quicksand';
 }
 
 header {
-    background-color: #97d7e4;
     text-align: center;
+    font-size
     height: 100px;
     line-height: 100px; /* Center the text vertically */
     /*background: rgb(132,192,231);
