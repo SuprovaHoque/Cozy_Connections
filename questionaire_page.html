@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <link rel="stylesheet" href="style_of_page.css">
+      <script src="script.js"></script>
+      <title>Cozy Clothing</title>
+   </head>
+   <body>  
+      <form id="donationForm"> 
+         <header>
+            <h1>Cozy Clothing</h1>
+         </header>
+         <br>
+         <p id="amountToDonate">
+            1. How many items will you be donating? 
+            <br>
+            <input type="range" id="amountToDonateInput" name="amountToDonate" min="10" max="60" step="10" onchange="updateTextInput(this.value);">
+            <input type="text" id="textInput" value="">
+        </p>   
+        <br>
+         <p id="genderAmount">
+            2. Which gender do you primarily have in your donation? (Please select all that apply)
+            <br>
+            <label><input type="checkbox" name="gender" value="male infant"> Male Infant</label>
+            <br>
+            <label><input type="checkbox" name="gender" value="female infant"> Female Infant</label>
+            <br>
+            <label><input type="checkbox" name="gender" value="male toddler">Male Toddler</label>
+            <br>
+            <label><input type="checkbox" name="gender" value="female toddler">Female Toddler</label>
+            <br>
+            <label><input type="checkbox" name="gender" value="male child">Male Child</label>
+            <br>
+            <label><input type="checkbox" name="gender" value="female child"> Female Child</label>
+            <br>
+            <label><input type="checkbox" name="gender" value="male pre-teen">Male Preteen</label>
+            <br>
+            <label><input type="checkbox" name="gender" value="female pre-teen">Female Preteen</label>
+            <br>
+            <label><input type="checkbox" name="gender" value="male teen">Male Teen</label>
+            <br>
+            <label><input type="checkbox" name="gender" value="female teen">Female Teen</label>
+            <br>
+            <label><input type="checkbox" name="gender" value="male adult">Male Adult</label>
+            <br>
+            <label><input type="checkbox" name="gender" value="female adult">Female Adult</label>
+         </p>
+         <br>
+         <p id="borough">
+            3. Which area of Calgary do you live in?
+            <br>
+            <label><input type="radio" name="area" value="north west">North West</label>
+            <br>
+            <label><input type="radio" name="area" value="south west">South West</label>
+            <br>
+            <label><input type="radio" name="area" value="north east">North East</label>
+            <br>
+            <label><input type="radio" name="area" value="south east">South East</label>
+         </p>
+         <br>
+         <p>
+            <div id="submitButton">
+            <button type="button" onclick="submitForm()">Get Your Matches!</button>
+            </div>
+         </p>
+      </form>  
+      <div id="resultMessage" style="display: none;"></div>
+      <script src="questionaire.js"></script>
+   </body>
+</html>
