@@ -6,15 +6,31 @@
 
 body {
     text-align: center;
-    height: 1000px;
-    /*line-height: 400px; /* Center the text vertically */
+    height: 2000px;
     font-size: xx-large;
     background: linear-gradient(to bottom, #87CEEB, #FF69B4);
     
 }
 
-h2{
-    font-size: xx-large;
+Hat.img{
+    position: relative;
+    top: -400px;
 }
+
+h2{
+    padding-top: 200px;
+    font-size: 900;
+    color: rgb(105, 96, 96);
+}
+
+
+button{
+    margin-top: 200px;
+    height: 200px;;
+    width: 400px;
+    font-size: 80px;
+    background-color: rgb(185, 153, 228);
+}
+
 
 
