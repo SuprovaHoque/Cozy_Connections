@@ -1,19 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;700&display=swap');
 
-
 * {
     margin: 0;
     padding: 0;
-    font-family: 'Quicksand';
+    font-family: 'Quicksand', sans-serif; /* Added a fallback font */
 }
 
 header {
     text-align: center;
-    font-size
+    font-size: 22px; 
     height: 100px;
     line-height: 100px; /* Center the text vertically */
-    /*background: rgb(132,192,231);
-    background: linear-gradient(356deg, rgba(132,192,231,1) 0%, rgba(206,140,196,1) 100%);*/
     background: rgb(95,168,255);
     background: linear-gradient(356deg, rgba(95,168,255,1) 0%, rgba(255,58,58,1) 100%);
 }
@@ -21,7 +18,7 @@ header {
 body {
     text-align: center;
     margin: 0;
-    background: linear-gradient(to bottom, #87CEEB, #ea8bba);
+    background: linear-gradient(to bottom, #87CEEB, #FF69B4);
 }
 
 #matchedFamilies,
@@ -32,113 +29,13 @@ body {
     margin-left: 20%;
     margin-right: 20%;
     height: 150px;
-}
-/*.box {
-    width: 200px;
-    height: 100px;
-    border: 1px solid black;
+    border-radius: 15px;
     padding: 10px;
-    margin: 10px;*/
-
-body {background-color: #ddd; margin: 3rem;}
-
-#tv {
-  position: absolute;
-  top: -20px;
-  left: -150px; 
-  width: 1000px;
-  height: 150px;
-  width: 1000px;
-  height: 150px;
-  background: rgba(252, 244, 250, 0.936);
-  border-radius: 10px ;
-  color:(23, 17, 17);
-  box-shadow: 20px 20px rgba(0,0,0,.15);
-  text-shadow: 1px 1px 1px #ee7ed9;
-  transition: all .4s ease;
-  font-size: 25px
+    background-color: rgb(249, 249, 249, 0.6);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.7);
 }
-#tv:hover {
-  border-radius: 50% ;
-  box-shadow: 10px 10px rgba(0,0,0,.25);
-  text-align: center;
+
+#donationLocation {
+    margin-bottom: 100px; /* Add space at the bottom */
+    margin-top: 50px;
 }
-.thing {
-    position: absolute;
-    top: 20px;
-    left: -145px;
-    padding: 1rem;
-    width: 900px;
-    height:50px;
-    box-shadow: 0 15px 30px 0 rgba(0,0,0,0.11),
-      0 5px 15px 0 rgba(0,0,0,0.08);
-    text-shadow: 1px 1px 1px #ccc;
-    background-color: #ffffff;
-    border-radius: 0.5rem;
-    
-    border-left: 0 solid #00ff99;
-    transition: border-left 300ms ease-in-out, padding-left 300ms ease-in-out;
-  }
-  
-  .thing:hover {
-    padding-left: 0.5rem;
-    border-left: 0.5rem solid rgb(157, 0, 255);
-  }
-  .bubble {
-    width: 100px;
-    height: 100px;
-    background: linear-gradient(135deg, #d44e98 0%, #3a9ebe 100%);
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: #fff;
-    font-size: 24px;
-    font-weight: bold;
-    text-align: center;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-  }
-  .drop {
-    position: absolute;
-    height: 200px;
-    width: 200px;
-    background: #7d9fc0;
-    border-radius: 51% 49% 48% 52% / 62% 44% 56% 38%;
-    opacity: 0.8;
-    border: 2px solid #7097c6;
-  }
-  
-  .drop::before {
-    content: "";
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    background: rgb(225, 23, 117);
-    border-radius: 51% 49% 48% 52% / 62% 44% 56% 38%;
-    box-shadow: -5px 30px 16px #e3b1c7, -40px 60px 32px rgb(161, 33, 150), 27, 195), inset -6px 6px 10px #1B6CFB, inset 2px 6px 10px #1a74e5, inset 20px -20px 22px white, inset 40px -40px 44px #a8ceff;
-  }
-  
-  .drop::after {
-    content: "";
-    position: absolute;
-    height: 40px;
-    width: 40px;
-    background: #E6FDFB;
-    border-radius: 44% 56% 46% 54% / 36% 50% 50% 64%;
-    left: 130px;
-    top: 40px;
-    box-shadow: 16px 40px 0 -10px white;
-    opacity: 0.8;
-  }
-  
-  .drop1 {
-    left: -100px;
-    top: -50px;
-  }
-  
-  .drop2 {
-    right: 100px;
-    bottom: -50px;
-    z-index: 0;
-    border-radius: 46%
-  }
