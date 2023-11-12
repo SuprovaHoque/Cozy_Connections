@@ -39,3 +39,7 @@ body {
     margin-bottom: 100px; /* Add space at the bottom */
     margin-top: 50px;
 }
+
+#matchedFamilies{
+  line-height: 140px;
+}
