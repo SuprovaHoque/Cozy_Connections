@@ -1,19 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;700&display=swap');
 
-
 * {
     margin: 0;
     padding: 0;
-    font-family: 'Quicksand';
+    font-family: 'Quicksand', sans-serif; /* Backup font */
 }
 
 header {
     text-align: center;
-    font-size
+    font-size: 16px; 
     height: 100px;
-    line-height: 100px; /* Center the text vertically */
-    /*background: rgb(132,192,231);
-    background: linear-gradient(356deg, rgba(132,192,231,1) 0%, rgba(206,140,196,1) 100%);*/
+    line-height: 100px; 
     background: rgb(95,168,255);
     background: linear-gradient(356deg, rgba(95,168,255,1) 0%, rgba(255,58,58,1) 100%);
 }
