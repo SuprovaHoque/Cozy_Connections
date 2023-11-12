@@ -1,24 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Quicksand', sans-serif; /* Added a fallback font */
+}
+
+header {
+    text-align: center;
+    font-size: 22px; 
+    height: 100px;
+    line-height: 100px; /* Center the text vertically */
+    background: rgb(95,168,255);
+    background: linear-gradient(356deg, rgba(95,168,255,1) 0%, rgba(255,58,58,1) 100%);
+}
+
 body {
-    font-family: Open, sans-serif;
-    margin: 20px;
-    
-}
-button {
-    padding: 10px;
-    background-color: #4caf50;
-    color: white;
-    border: none;
-    cursor: pointer;
+    text-align: center;
+    font-size: 18px;
+    margin: 0;
+    background: linear-gradient(to bottom, #87CEEB, #FF69B4);
 }
 
-button:hover {
-    background-color: #45a049;
+#matchedFamilies,
+#donationLocation {
+    position: relative;
+    text-align: center;
+    margin-top: 100px;
+    margin-left: 20%;
+    margin-right: 20%;
+    height: 150px;
 }
+#submitButton{
+    position: relative;
+    text-align: center;
+    margin-left: 47%;
+    margin-right: 50%;
+    width: 50px;
+    height:20px;
+    background-color: rgb(148, 98, 189)
 
-#resultMessage {
-    margin-top: 20px;
-    padding: 10px;
-    border: 1px solid #ddd;
-    display: none;
-    color:red;
 }
